@@ -12,11 +12,11 @@
   <div id="app">加载中...</div>
   <script>
     window.$docsify = {
-      name: 'doc',
-      loadSidebar: true,
-      subMaxLevel: 2,
-      repo: 'haloislet/doc-site-template', 
-      search: {
+      name: 'doc', // 文档标题
+      loadSidebar: true, // 自定义侧边导航栏
+      subMaxLevel: 2, // 	设置二级标题自动生成目录
+      repo: 'haloislet/doc-site-template',  // 在右上角显示 GitHub Corner 挂件
+      search: { // 全文搜索自定义
         noData: {
           '/': '没有结果!'
         },
@@ -27,8 +27,11 @@
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <!-- 搜索插件，可自定义配置 -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script> 
+  <!-- emoji 插件 -->
   <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+  <!-- 图片缩放插件 -->
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
 </body>
 </html>
