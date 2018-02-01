@@ -7,3 +7,6 @@ function foo() {
     console.log('test')
 }
 ```
+
+测试图片
+![sierra](./imgs/Sierra.jpg)
