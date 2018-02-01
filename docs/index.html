@@ -15,7 +15,7 @@
       name: 'doc', // 文档标题
       loadSidebar: true, // 自定义侧边导航栏
       subMaxLevel: 2, // 	设置二级标题自动生成目录
-      repo: 'haloislet/doc-site-template',  // 在右上角显示 GitHub Corner 挂件
+      repo: 'haloislet/doc-site-template',  // 在右上角显示 GitHub Corner 挂件 
       search: { // 全文搜索自定义
         noData: {
           '/': '没有结果!'
@@ -24,6 +24,20 @@
           '/': '搜索'
         }
       },
+      formatUpdated: '{YYYY}/{MM}/{DD}  {HH}:{mm}',
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function (html) {
+            var url = 'https://github.com/haloislet/doc-site-template/blob/master/docs/' + vm.route.file
+            var editHtml = '[:memo: Edit Document](' + url + ')\n'
+            return editHtml
+              + html
+              + '\n----\n'
+              + 'Last modified {docsify-updated} '
+              + editHtml
+          })
+        }
+      ]
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
