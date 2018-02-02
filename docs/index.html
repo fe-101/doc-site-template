@@ -7,9 +7,11 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//unpkg.com/docsify-copy-code/styles.css">
 </head>
 <body>
   <div id="app">加载中...</div>
+  <script src="//unpkg.com/docsify-copy-code/index.js"></script>
   <script>
     window.$docsify = {
       name: 'doc', // 文档标题
@@ -27,6 +29,7 @@
       },
       // formatUpdated: '{YYYY}/{MM}/{DD}  {HH}:{mm}', // 日期格式化
       plugins: [
+        window.DocsifyCopyCodePlugin.init()
         // 添加更新日期和编辑文档
         // function(hook, vm) { 
         //   hook.beforeEach(function (html) {
