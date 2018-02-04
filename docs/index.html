@@ -18,8 +18,8 @@
       loadSidebar: true, // 自定义侧边导航栏
       subMaxLevel: 2, // 	设置二级标题自动生成目录
       auto2top: true, // 切换页面后自动跳转到页面顶部
-      repo: 'haloislet/doc-site-template',  // 在右上角显示 GitHub Corner 挂件 
-      ga: 'UA-113489240-1', // google analytics
+      // repo: 'haloislet/doc-site-template',  // 在右上角显示 GitHub Corner 挂件 
+      // ga: 'UA-113489240-1', // google analytics
       search: { // 全文搜索自定义
         noData: {
           '/': '没有结果!'
@@ -28,22 +28,22 @@
           '/': '搜索'
         }
       },
-      formatUpdated: '{YYYY}/{MM}/{DD}  {HH}:{mm}', // 日期格式化
+      // formatUpdated: '{YYYY}/{MM}/{DD}  {HH}:{mm}', // 日期格式化
       plugins: [
-        window.DocsifyCopyCodePlugin.init(),
+        window.DocsifyCopyCodePlugin.init()
         // 添加更新日期和编辑文档
-        function(hook, vm) { 
-          hook.beforeEach(function (html) {
-            var url = 'https://github.com/haloislet/doc-site-template/blob/master/docs/' + vm.route.file
-            var editHtml = '[:memo: Edit Document](' + url + ')\n'
-            return editHtml
-              + html
-              + '\n'
-              + '<hr>'
-              + 'Last modified {docsify-updated} '
-              + editHtml
-          })
-        }
+        // function(hook, vm) { 
+        //   hook.beforeEach(function (html) {
+        //     var url = 'https://github.com/haloislet/doc-site-template/blob/master/docs/' + vm.route.file
+        //     var editHtml = '[:memo: Edit Document](' + url + ')\n'
+        //     return editHtml
+        //       + html
+        //       + '\n'
+        //       + '<hr>'
+        //       + 'Last modified {docsify-updated} '
+        //       + editHtml
+        //   })
+        // }
       ]
     }
   </script>
@@ -55,6 +55,6 @@
   <!-- 图片缩放插件 -->
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- google analytics 插件 -->
-  <script src="//unpkg.com/docsify/lib/plugins/ga.js"></script>
+  <!-- <script src="//unpkg.com/docsify/lib/plugins/ga.js"></script> -->
 </body>
 </html>

@@ -1,2 +1,2 @@
-- 入门
-  - [快速开始](quickstart.md)
+- [首页](README.md)
+- [快速开始](quickstart.md)
