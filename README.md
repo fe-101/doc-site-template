@@ -1,10 +1,4 @@
 在线文档模板 
 ===
- 
- ### 使用
-
- 启动开发环境，打开 http://localhost:3000 预览网站
- ```
-$ npm run dev
- ```
+>　使用 [docsify](https://github.com/QingWei-Li/docsify) 搭建的在线文档模板
  
